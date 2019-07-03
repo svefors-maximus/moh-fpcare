@@ -16,7 +16,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e --webdriver-update false",
-    "pree2e": "webdriver-manager update --versions.chrome=2.40"
+    "pree2e": "webdriver-manager update --versions.chrome=2.40",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "private": true,
   "dependencies": {
@@ -57,7 +59,8 @@
     "typescript": "~3.2.4",
     "xlsx": "^0.14.1",
     "zlib": "^1.0.5",
-    "zone.js": "^0.8.29"
+    "zone.js": "^0.8.29",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.13.8",
@@ -76,5 +79,6 @@
     "protractor": "^5.4.1",
     "ts-node": "5.0.1",
     "tslint": "5.0.0"
-  }
+  },
+  "snyk": true
 }
